@@ -1,0 +1,32 @@
+@startuml
+class MainActivity {
+    - EditText etProductName
+    - EditText etProductQuantity
+    - EditText etProductPrice
+    - Button btnAddProduct
+    - TextView tvTotalProducts
+    - TextView tvTotalPrice
+    - ListView lvProducts
+    - ArrayList<Product> productList
+    - ArrayAdapter<String> productAdapter
+    - ArrayList<String> productNames
+    + void onCreate(Bundle savedInstanceState)
+    + void addProduct()
+    + void updateTotals()
+    + void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo)
+    + boolean onContextItemSelected(MenuItem item)
+}
+
+class Product {
+    - String name
+    - int quantity
+    - double price
+    + Product(String name, int quantity, double price)
+    + String getName()
+    + int getQuantity()
+    + double getPrice()
+    + boolean hasPrice()
+}
+
+MainActivity --> Product : utiliza >
+@enduml

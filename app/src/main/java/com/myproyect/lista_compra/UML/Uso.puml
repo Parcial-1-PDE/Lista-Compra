@@ -1,0 +1,14 @@
+@startuml
+actor Usuario
+
+usecase "Agregar Producto" as UC_Agregar
+usecase "Eliminar Producto" as UC_Eliminar
+usecase "Ver Total de Productos" as UC_VerTotalProductos
+usecase "Ver Precio Total" as UC_VerPrecioTotal
+
+Usuario --> UC_Agregar
+Usuario --> UC_Eliminar
+Usuario --> UC_VerTotalProductos
+Usuario --> UC_VerPrecioTotal
+
+@enduml
